@@ -4,8 +4,7 @@
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <body style="margin : 0px; overflow: hidden;">
-        <a-scene embedded arjs
-        >
+        <a-scene embedded arjs='sourceType: webcam;'>
             <a-assets>
                 <a-asset-item id="nuclearStation" src="https://cdn.glitch.com/0f9d731a-7c55-4b67-b36d-281efa100dca%2FNuclear%20station.glb"></a-asset-item>
                 <a-asset-item id="atom" src="https://cdn.glitch.com/0f9d731a-7c55-4b67-b36d-281efa100dca%2Fatom.glb"></a-asset-item>
@@ -15,11 +14,11 @@
                 <a-entity
                 position="0 0 0"
                 rotation="0 0 0"
-                scale="0.5 0.5 0.5"
+                scale="0.2 0.2 0.2"
                 gltf-model="#nuclearStation"
                 ></a-entity>
             </a-marker>
-			<a-marker type='pattern' url='assets/ns.patt'>
+			<a-marker preset='custom' url='assets/ns.patt'>
 				<a-entity
 				position="0 0 0"
 				rotation="0 0 0"
@@ -27,7 +26,7 @@
 				gltf-model="#nuclearStation"
 				></a-entity>
 			</a-marker>
-            <a-marker type='pattern' url='assets/atom.patt'>
+            <a-marker preset='custom' url='assets/atom.patt'>
 				<a-entity
 				position="0 0 0"
 				rotation="0 0 0"
@@ -35,7 +34,7 @@
 				gltf-model="#atom"
 				></a-entity>
 			</a-marker>
-            <a-marker type='pattern' url='assets/rosatom.patt'>
+            <a-marker preset='custom' url='assets/rosatom.patt'>
 				<a-entity
 				position="0 0 0"
 				rotation="0 0 0"
