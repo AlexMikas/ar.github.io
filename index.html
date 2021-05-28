@@ -9,18 +9,32 @@
         <a-scene embedded arjs
         >
             <a-assets>
-                <!-- <a-asset-item id="powerPlant" src="https://cdn.glitch.com/0f9d731a-7c55-4b67-b36d-281efa100dca%2FFF.glb"></a-asset-item> -->
-                <!-- <a-asset-item id="arch" src="https://cdn.glitch.com/0f9d731a-7c55-4b67-b36d-281efa100dca%2Farch.glb"></a-asset-item> -->
                 <a-asset-item id="nuclearStation" src="https://cdn.glitch.com/0f9d731a-7c55-4b67-b36d-281efa100dca%2FNuclear%20station.glb"></a-asset-item>
-                <!-- <a-asset-item id="tile" src="https://cdn.glitch.com/0f9d731a-7c55-4b67-b36d-281efa100dca%2Fscene.glb"></a-asset-item> -->
-                <!-- <a-asset-item id="sculpture" src="https://cdn.glitch.com/90a30469-f038-4054-be9c-fd1ec94a810d%2Fkitchentest.glb"></a-asset-item> -->
+                <a-asset-item id="atom" src="https://cdn.glitch.com/0f9d731a-7c55-4b67-b36d-281efa100dca%2Fatom.glb"></a-asset-item>
+                <a-asset-item id="rosatom" src="https://cdn.glitch.com/0f9d731a-7c55-4b67-b36d-281efa100dca%2Fatom.glb"></a-asset-item>
             </a-assets>
-			<a-marker preset="hiro">
+			<a-marker preset='custom' type='pattern' url='assets/ns.patt'>
 				<a-entity
 				position="0 0 0"
 				rotation="0 0 0"
-				scale="0.25 0.25 0.25"
+				scale="0.2 0.2 0.2"
 				gltf-model="#nuclearStation"
+				></a-entity>
+			</a-marker>
+            <a-marker preset='custom' type='pattern' url='assets/atom.patt'>
+				<a-entity
+				position="0 0 0"
+				rotation="0 0 0"
+				scale="1 1 1"
+				gltf-model="#atom"
+				></a-entity>
+			</a-marker>
+            <a-marker preset='custom' type='pattern' url='assets/rosatom.patt'>
+				<a-entity
+				position="0 0 0"
+				rotation="0 0 0"
+				scale="1 1 1"
+				gltf-model="#rosatom"
 				></a-entity>
 			</a-marker>
         </a-marker>
